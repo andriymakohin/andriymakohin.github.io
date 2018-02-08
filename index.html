@@ -573,7 +573,7 @@
 
 	/* Стрілка в верх, плавне переміщення */
 
-			$(document).ready(function(){
+		$(document).ready(function(){
 	    // hide .top first
 	    $(".top").hide();
 	    
@@ -587,14 +587,12 @@
 	            }
 	        });
 	        // scroll body to 0px on click
-	        $('.top a').click(function () {
-	            $('body,html').animate({
-	                scrollTop: 0.5
-	            }, 800);
-	            return false;
-	        });
+			$(".top").click(function(e){
+				e.preventDefault();
+				$("html,body").animate({scrollTop:0},1000);
+			});
 	    });
-	});
+	
 
 	/* Плавный скролл до потрібного блоку */
 
@@ -602,9 +600,8 @@
 				var href=$(this).attr("href");
 				$("html,body").animate({scrollTop:$(href).offset().top},1000);
 			});
-
-
 		});
+	});
 	</script>
 </body>
 </html>
