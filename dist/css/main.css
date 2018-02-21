@@ -170,7 +170,6 @@ h2:after {
 .team .mans {
   color: #000;
   width: 270px;
-  height: 510px;
   vertical-align: top;
   margin: 50px 0 auto;
 }
@@ -474,6 +473,7 @@ div[data_portfolio="all"] {
   border: none;
   color: #fff;
   padding: 15px;
+  resize: none;
   font-size: 18px;
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 25px;
