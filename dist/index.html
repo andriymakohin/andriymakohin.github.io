@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>sigxak</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Signika:400,700" rel="stylesheet">
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"> -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -17,6 +18,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="img/iconified/apple-touch-icon-144x144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="img/iconified/apple-touch-icon-152x152.png" />
 	<link rel="apple-touch-icon" sizes="180x180" href="img/iconified/apple-touch-icon-180x180.png" />
+
 	<!-- <link rel="stylesheet/less" type="text/css" href="styles/styles.less">
 	<script src="styles/less.min.js"></script> -->
 </head>
@@ -30,7 +32,7 @@
 
 	<nav>
 		<ul>
-			<li><a href="#home">home</a>//</li>
+			<li><a href="#">home</a>//</li>
 			<li><a href="#about">about</a>//</li>
 			<li><a href="#portfolio">portfolio</a>//</li>
 			<li><a href="#services">services</a>//</li>
@@ -53,7 +55,7 @@
 
 		<div class="team">
 			<div class="mans">
-				<img  src="img/about-1.jpg">
+				<img src="img/about-1.jpg">
 				<div class="desk">
 					<p class="name">//  REISS SOMERS //</p>
 					<p class="profil">Founder</p>
@@ -503,8 +505,10 @@
 			<div class="right_form">
 				<textarea placeholder="Message"></textarea>
 			</div>
-
-			<input type="submit" value="submit">
+			<input href="#text-popup" class="popup-content" type="submit" value="submit">
+			<div id="text-popup" class="white-popup mfp-hide">
+				<p>Thank you for leaving your message!</p>
+			</div>
 		</form>
 	</section>
 
@@ -543,10 +547,24 @@
 		</ul>
 
 		<div class="social">
-			<a href="https://plus.google.com/u/0/111379335254589454168" target="_blank"><img src="img/gplus.png"  alt=""></a>
-			<a href="https://www.facebook.com/andreas.makohin" target="_blank"><img src="img/fb.png" alt=""></a>
-			<a href="#"><img src="img/tw.png" alt=""></a>
-			<a href="https://www.linkedin.com/in/andrii-makohin-64745b157/" target="_blank"><img src="img/link.png" alt=""></a>
+			<a class="fa-stack  fa-2x" href="https://plus.google.com/u/0/111379335254589454168" target="_blank">
+				<i class="fa fa-circle fa-stack-2x" style="color:rgba(255, 0, 0, 0.705)"></i>
+				<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+			</a>
+			<a class="fa-stack  fa-2x" href="https://www.facebook.com/andreas.makohin" target="_blank">
+				<i class="fa fa-circle fa-stack-2x" style="color:rgba(0, 0, 255, 0.418)"></i>
+				<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+			</a>
+			<a class="fa-stack  fa-2x" href="#">
+				<i class="fa fa-circle fa-stack-2x" style="color:rgba(0, 255, 255, 0.658)"></i>
+				<i class="fa fa-twitter fa-stack-1x fa-inverse
+				"></i>
+			</a>
+			<a class="fa-stack  fa-2x" href="https://www.linkedin.com/in/andrii-makohin-64745b157/" target="_blank">
+				<i class="fa fa-circle fa-stack-2x" style="color:rgb(0, 119, 255)"></i>
+				<i class="fa fa-linkedin-square fa-stack-1x fa-inverse
+				"></i>
+			</a>
 		</div>
 	</div>
 </footer>
@@ -559,18 +577,15 @@
 
 
 
-
-
      <!-- Підключення скриптів
      ===================================================================================================================
  -->
 
-	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-
 
 	<a href="#" class="top">&uarr;</a>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
 	<script src="js/libs.min.js"></script>
-
+	<script src="js/main.js"></script>
 	<script>
 	/* Виділення блоків тільки необхідного типу */
 		$(document).ready(function(){
@@ -601,16 +616,15 @@
 				e.preventDefault();
 				$("html,body").animate({scrollTop:0},1000);
 			});
-	    });
-	
-
-	/* Плавный скролл до потрібного блоку */
-
-			$("nav a").click(function(e){
-				var href=$(this).attr("href");
-				$("html,body").animate({scrollTop:$(href).offset().top},1000);
+		});
+	});
+			jQuery(document).ready(function($) {
+			$('.popup-content').magnificPopup({
+				type: 'inline'
 			});
 		});
+
+
 	});
 	</script>
 </body>
