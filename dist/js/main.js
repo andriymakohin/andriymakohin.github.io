@@ -1,7 +1,7 @@
-// Circular Preloader Animation
-// ==========================================================================
-//Pure JS, completely customizable preloader from GreenSock.
-//Once you create an instance like var preloader = new GSPreloader(), call preloader.active(true) to open it, preloader.active(false) to close it, and preloader.active() to get the current status. Only requires TweenLite and CSSPlugin (https://www.greensock.com/gsap/)
+// // Circular Preloader Animation
+// // ==========================================================================
+// //Pure JS, completely customizable preloader from GreenSock.
+// //Once you create an instance like var preloader = new GSPreloader(), call preloader.active(true) to open it, preloader.active(false) to close it, and preloader.active() to get the current status. Only requires TweenLite and CSSPlugin (https://www.greensock.com/gsap/)
 // var preloader = new GSPreloader({
 //     radius:42, 
 //     dotSize:15, 
@@ -100,52 +100,5 @@
 
 
 
-  var scene = document.getElementById('scene');
-var parallax = new Parallax(scene);
-
-for (var i = 1; i < 6; i++) {
-twinkleLoop(i);
-};
-
-function twinkleLoop(i) {
-var duration = ((Math.random() * 5) + 3)
-duration = duration - ((495 - speed)/100)
-twinkle(i, duration)
-setTimeout(function() {
-twinkleLoop(i)
-}, duration * 1000);
-}
-
-function twinkle(id, duration) {
-var top = (Math.floor(Math.random() * 85) + 0) + '%';
-var left = (Math.floor(Math.random() * 85) + 0) + '%';
-
-$('#speck' + id).remove();
-$('#specks').append("<div class='speck' id='speck" + id + "'></div>")
-$('#speck' + id).css({
-'top': top,
-'left': left,
-'animation-duration': duration + 's',
-'animation-timing-function': 'cubic-bezier(0.250, 0.250, 0.750, 0.750)',
-'animation-name': 'twinkle',
-})
-}
-
-var speed = 400;
-//Слайдер
-$(document).ready(function(){
-$("#slider").on("change", function() {
-$('.speck').remove();
-for (var i = 1; i < 4; i++) {
-
-speed = 201 - this.value;
-$('#range').text('1000px / '+(speed/10)+'s')
-speed = speed * (i / 1.25)
-$('#img-' + i).css({
-'animation-duration': speed + 's',
-'animation-name': 'float'
-});
-}
-});
-})
+  
   
