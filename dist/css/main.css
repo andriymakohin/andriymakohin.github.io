@@ -566,6 +566,8 @@ footer .social a {
   margin: 20px auto;
   text-align: center;
   font-size: 18px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
 }
 .mfp-bg {
   top: 0;
@@ -587,7 +589,6 @@ footer .social a {
   z-index: 1043;
   position: fixed;
   outline: none !important;
-  -webkit-backface-visibility: hidden;
 }
 .mfp-container {
   text-align: center;
@@ -638,6 +639,15 @@ footer .social a {
 .mfp-auto-cursor .mfp-content {
   cursor: auto;
 }
+.mfp-close,
+.mfp-arrow,
+.mfp-preloader,
+.mfp-counter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
 .mfp-loading.mfp-figure {
   display: none;
 }
@@ -673,7 +683,6 @@ button.mfp-arrow {
   color: #FFF;
   font-style: normal;
   font-size: 28px;
-  font-family: Arial, Baskerville, monospace;
 }
 .mfp-close:hover,
 .mfp-close:focus {
@@ -685,4 +694,46 @@ button.mfp-arrow {
 }
 .mfp-close-btn-in .mfp-close {
   color: #333;
+}
+#bg_popup {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#popup {
+  background: #93c1d6;
+  width: 520px;
+  margin: 25% auto;
+  padding: 5px 20px 13px 20px;
+  border: 2px solid #1BA600;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 20px #000;
+  box-shadow: 0px 0px 20px #000;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+}
+.close {
+  display: block;
+  position: absolute;
+  top: -12px;
+  right: 5px;
+  width: 25px;
+  height: 25px;
+  line-height: 28px;
+  color: #fff;
+  background: #1BA600;
+  cursor: pointer;
+  text-align: center;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+  background-color: #204c8d;
 }

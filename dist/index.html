@@ -572,6 +572,21 @@
 <div class="copyright">
 	<p>Copyright© 2016 XakBoX. All rights reserved. <a href="#">Privacy Policy</a> | <a href="">Terms of Service</a> | <a href="">Careers</a></p>
 </div>
+<div id="bg_popup">
+	<div id="popup">
+		<h1>Welcome To Sigxak</h1>
+		<p>Creative Fashion Stylist</p>
+		<a class="close" href="#" title="Закрыть" onclick="document.getElementById('bg_popup').style.display='none'; return false;">X</a>
+ 	</div>
+</div>  
+
+
+<!-- <div id="cls_ctnr">
+	<div id="cls_pop">
+	<span class="cls_close" onclick="document.getElementById('cls_ctnr').style.display='none'; return false;">X</span>
+	<p>Thank you for visiting our site!Good Luck!</p>
+	</div>  
+	</div>   -->
 
 
 
@@ -586,6 +601,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		var delay_popup = 5000;
+		setTimeout("document.getElementById('bg_popup').style.display='block'", delay_popup);
+	</script>  
 	<script>
 	/* Виділення блоків тільки необхідного типу */
 		$(document).ready(function(){
@@ -623,7 +642,9 @@
 				type: 'inline'
 			});
 		});
-
+		// $(document).mouseleave(function(){$('#cls_ctnr').show({type: 'inline'
+		// });
+		// });
 
 	});
 	</script>
