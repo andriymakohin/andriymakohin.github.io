@@ -1,3 +1,48 @@
+/* Виділення блоків тільки необхідного типу */
+$(document).ready(function(){
+    $(".portfolio_menu a").click(function(e){
+        e.preventDefault(); /*Відміна стандартної події*/
+        var link = $(this).data("link"); /*Отримання атрибуту data-link*/
+        $("div[data_portfolio]").hide(); /*Приховування всіх блоків з портфоліо*/
+        $("div[data_portfolio='"+link+"']").fadeIn();
+    });
+
+/* Стрілка в верх, плавне переміщення */
+
+$(document).ready(function(){
+// hide .top first
+$(".top").hide();
+
+// fade in .top
+$(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.top').fadeIn();
+        } else {
+            $('.top').fadeOut();
+        }
+    });
+    // scroll body to 0px on click
+    $(".top").click(function(e){
+        e.preventDefault();
+        $("html,body").animate({scrollTop:0},1000);
+    });
+});
+});
+    jQuery(document).ready(function($) {
+    $('.popup-content').magnificPopup({
+        type: 'inline'
+    });
+});
+// $(document).mouseleave(function(){$('#cls_ctnr').show({type: 'inline'
+// });
+// });
+
+});
+
+
+
+
 // // Circular Preloader Animation
 // // ==========================================================================
 // //Pure JS, completely customizable preloader from GreenSock.

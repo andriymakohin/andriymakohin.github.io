@@ -18,6 +18,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="img/iconified/apple-touch-icon-144x144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="img/iconified/apple-touch-icon-152x152.png" />
 	<link rel="apple-touch-icon" sizes="180x180" href="img/iconified/apple-touch-icon-180x180.png" />
+	<link href="css/animate.css" rel="stylesheet">
 
 	<!-- <link rel="stylesheet/less" type="text/css" href="styles/styles.less">
 	<script src="styles/less.min.js"></script> -->
@@ -25,9 +26,9 @@
 
 <body>
 	<header>
-		<h1>Welcome To Sigxak</h1>
-		<h3>Creative Fashion Stylist</h3>
-		<h6>designer // photographer // model</h6>
+		<h1 class="wow zoomIn">Welcome To Sigxak</h1>
+		<h3 class="wow bounceInLeft">Creative Fashion Stylist</h3>
+		<h6 class="wow bounceInRight">designer // photographer // model</h6>
 	</header>
 
 	<nav>
@@ -42,19 +43,21 @@
 	</nav>
 
 	<article class="about">
-		<a name="about"><h2>ABOUT</h2></a>
-		<h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</h6>
+		<div class="wow zoomIn">
+			<a name="about"><h2>ABOUT</h2></a>
+			<h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</h6>
+		</div>
 		<div class="blokstext">
-			<p>
+			<p class="wow slideInLeft">
 				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
 			</p>
-			<p>
+			<p class="wow slideInRight">
 				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
 			</p>
 		</div>
 
 		<div class="team">
-			<div class="mans">
+			<div class="mans wow slideInDown">
 				<img src="img/about-1.jpg">
 				<div class="desk">
 					<p class="name">//  REISS SOMERS //</p>
@@ -69,7 +72,7 @@
 				</div>
 			</div>
 
-			<div class="mans">
+			<div class="mans wow slideInUp">
 				<img  src="img/about-2.jpg">
 				<div class="desk">
 					<p class="name">//  CHRIS DOE  //</p>
@@ -84,7 +87,7 @@
 				</div>
 			</div>
 
-			<div class="mans">
+			<div class="mans wow slideInDown">
 				<img  src="img/about-3.jpg">
 				<div class="desk">
 					<p class="name">//  JOSH SOMERS //</p>
@@ -99,7 +102,7 @@
 				</div>
 			</div>
 
-			<div class="mans">
+			<div class="mans wow slideInUp">
 				<img  src="img/about-4.jpg">
 				<div class="desk">
 					<p class="name">//  HENRY DOE //</p>
@@ -118,7 +121,9 @@
 
 	
 	<article class="portfolio">
-		<a name="portfolio"><h2>Portfolio</h2></a>
+		<div class="wow zoomIn">
+			<a name="portfolio"><h2>Portfolio</h2></a>
+		</div>
 		<div class="portfolio_menu">
 			<a href="#" data-link="all">Show all</a> //
 			<a href="#" data-link="illustration">illustration</a> //
@@ -385,10 +390,12 @@
 	</article>
 
 	<section class="services">
-		<a name="services"><h2>Services</h2></a>
-		<h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</h6>
+		<div class="wow zoomIn">
+			<a name="services"><h2>Services</h2></a>
+			<h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</h6>
+		</div>
 		<div class="services_bloks">
-			<div class="service_item">
+			<div class="service_item wow slideInLeft">
 				<div class="serv_img">
 					<i class="fa fa-desktop" aria-hidden="true"></i>
 				</div>
@@ -397,7 +404,7 @@
 				<div class="more"><a href="#">Read more +</a></div>
 			</div>
 
-			<div class="service_item">
+			<div class="service_item wow slideInRight">
 				<div class="serv_img">
 					<i class="fa fa-cogs" aria-hidden="true"></i>
 				</div>
@@ -406,7 +413,7 @@
 				<div class="more"><a href="#">Read more +</a></div>
 			</div>
 
-			<div class="service_item">
+			<div class="service_item wow slideInLeft">
 				<div class="serv_img">
 					<i class="fa fa-windows" aria-hidden="true"></i>
 				</div>
@@ -415,7 +422,7 @@
 				<div class="more"><a href="#">Read more +</a></div>
 			</div>
 
-			<div class="service_item">
+			<div class="service_item wow slideInRight">
 				<div class="serv_img">
 					<i class="fa fa-clock-o" aria-hidden="true"></i>
 				</div>
@@ -427,59 +434,61 @@
 	</section>
 
 	<section class="blog">
-		<a name="blog"><h2>Blog</h2></a>
-		<h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</h6>
+		<div class="wow zoomIn">
+			<a name="blog"><h2>Blog</h2></a>
+			<h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</h6>
+		</div>
 		
-		<a href="#" class="news">
+		<a href="#" class="news wow fadeInDown">
 			<img src="img/blog/social.png" alt="">
 			<div class="news_cat">Social</div>
 			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		</a>
 
-		<a href="#" class="news">
+		<a href="#" class="news wow fadeInDown">
 			<img src="img/blog/people.png" alt="">
 			<div class="news_cat">People</div>
 			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		</a>
 
-		<a href="#" class="news">
+		<a href="#" class="news wow fadeInDown">
 			<img src="img/blog/social2.png" alt="">
 			<div class="news_cat">Social</div>
 			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		</a>
 
-		<a href="#" class="news">
+		<a href="#" class="news wow fadeInDown">
 			<img src="img/blog/people2.png" alt="">
 			<div class="news_cat">People</div>
 			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		</a>
 
-		<a href="#" class="news">
+		<a href="#" class="news wow fadeInUp">
 			<img src="img/blog/device.png" alt="">
 			<div class="news_cat">Device</div>
 			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		</a>
 
-		<a href="#" class="news">
+		<a href="#" class="news wow fadeInUp">
 			<img src="img/blog/people3.png" alt="">
 			<div class="news_cat">People</div>
 			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		</a>
 
-		<a href="#" class="news">
+		<a href="#" class="news wow fadeInUp">
 			<img src="img/blog/news.png" alt="">
 			<div class="news_cat">News</div>
 			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		</a>
 
-		<a href="#" class="news">
+		<a href="#" class="news wow fadeInUp">
 			<img src="img/blog/people4.png" alt="">
 			<div class="news_cat">People</div>
 			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
@@ -494,18 +503,18 @@
 	</section>
 
 	<section class="contact_us" id="contact_us">
-		<a name="contact"><h2>contact us</h2></a>
+		<a name="contact"><h2 class="wow zoomIn">contact us</h2></a>
 		<form>
 
-			<div class="left_form">
+			<div class="left_form wow slideInLeft">
 				<input type="text" placeholder="Name">
 				<input type="text" placeholder="e-mail">
 			</div>
 
-			<div class="right_form">
+			<div class="right_form wow slideInRight">
 				<textarea placeholder="Message"></textarea>
 			</div>
-			<input href="#text-popup" class="popup-content" type="submit" value="submit">
+			<input href="#text-popup" class="popup-content wow pulse animated" data-wow-duration="1s" data-wow-offset="100" style="visibility: visible; animation-duration: 1s; animation-name: zoomIn;" type="submit" value="submit">
 			<div id="text-popup" class="white-popup mfp-hide">
 				<p>Thank you for leaving your message!</p>
 			</div>
@@ -595,9 +604,9 @@
      <!-- Підключення скриптів
      ===================================================================================================================
  -->
-
-
 	<a href="#" class="top">&uarr;</a>
+	<script src="js/wow.js"></script>
+    <script>new WOW().init();</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
@@ -605,48 +614,5 @@
 		var delay_popup = 5000;
 		setTimeout("document.getElementById('bg_popup').style.display='block'", delay_popup);
 	</script>  
-	<script>
-	/* Виділення блоків тільки необхідного типу */
-		$(document).ready(function(){
-			$(".portfolio_menu a").click(function(e){
-				e.preventDefault(); /*Відміна стандартної події*/
-				var link = $(this).data("link"); /*Отримання атрибуту data-link*/
-				$("div[data_portfolio]").hide(); /*Приховування всіх блоків з портфоліо*/
-				$("div[data_portfolio='"+link+"']").fadeIn();
-			});
-
-	/* Стрілка в верх, плавне переміщення */
-
-		$(document).ready(function(){
-	    // hide .top first
-	    $(".top").hide();
-	    
-	    // fade in .top
-	    $(function () {
-	        $(window).scroll(function () {
-	            if ($(this).scrollTop() > 100) {
-	                $('.top').fadeIn();
-	            } else {
-	                $('.top').fadeOut();
-	            }
-	        });
-	        // scroll body to 0px on click
-			$(".top").click(function(e){
-				e.preventDefault();
-				$("html,body").animate({scrollTop:0},1000);
-			});
-		});
-	});
-			jQuery(document).ready(function($) {
-			$('.popup-content').magnificPopup({
-				type: 'inline'
-			});
-		});
-		// $(document).mouseleave(function(){$('#cls_ctnr').show({type: 'inline'
-		// });
-		// });
-
-	});
-	</script>
 </body>
 </html>
