@@ -1,3 +1,35 @@
+// прелоадер
+var
+    images = document.images,
+    images_total_count = images.length,
+    images_loader_count = 0;
+    preloader = document.getElementById('page-preloader');
+    perc_display = document.getElementById('load_perc');
+for( var i = 0; i < images_total_count; i++ )
+{
+    image_clon = new Image();
+    image_clon.onload = images_loader;
+    image_clon.onerror = images_loader;
+    image_clon.src = images[i].src;
+}
+
+function images_loader(){
+    images_loader_count++;
+    perc_display.innerHTML =  (( (100 / images_total_count) * images_loader_count ) << 0) + '%';
+
+    if( images_loader_count >= images_total_count )
+    {
+        setTimeout( function(){
+            if( !preloader.classList.contains('done') )
+            {
+                preloader.classList.add('done');
+            }
+        }, 1000);
+    }
+}
+
+
+
 /* Виділення блоків тільки необхідного типу */
 $(document).ready(function(){
     $(".portfolio_menu a").click(function(e){
