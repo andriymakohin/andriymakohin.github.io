@@ -2,29 +2,30 @@
 var
     images = document.images,
     images_total_count = images.length,
-    images_loader_count = 0;
+    images_loaded_count = 0;
     preloader = document.getElementById('page-preloader');
     perc_display = document.getElementById('load_perc');
+
 for( var i = 0; i < images_total_count; i++ )
 {
     image_clon = new Image();
-    image_clon.onload = images_loader;
-    image_clon.onerror = images_loader;
+    image_clon.onload = images_loaded;
+    image_clon.onerror = images_loaded;
     image_clon.src = images[i].src;
 }
 
-function images_loader(){
-    images_loader_count++;
-    perc_display.innerHTML =  (( (100 / images_total_count) * images_loader_count ) << 0) + '%';
+function images_loaded(){
+    images_loaded_count++;
+    perc_display.innerHTML =  (( (100 / images_total_count) * images_loaded_count ) << 0) + '%';
 
-    if( images_loader_count >= images_total_count )
+    if( images_loaded_count >= images_total_count )
     {
         setTimeout( function(){
             if( !preloader.classList.contains('done') )
             {
                 preloader.classList.add('done');
             }
-        }, 1000);
+        }, 1500);
     }
 }
 
